@@ -13,6 +13,10 @@ import { CrearProductosComponent } from './pages/productos/crear-productos/crear
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { VerProductoComponent } from './pages/productos/ver-producto/ver-producto.component';
 import { EditarProductosComponent } from './pages/productos/editar-productos/editar-productos.component';
+import { CrearReservasComponent } from './pages/reservas/crear-reservas/crear-reservas.component';
+import { EditarReservasComponent } from './pages/reservas/editar-reservas/editar-reservas.component';
+import { ListarReservasComponent } from './pages/reservas/listar-reservas/listar-reservas.component';
+import { VerReservasComponent } from './pages/reservas/ver-reservas/ver-reservas.component';
 
 
 @NgModule({
@@ -24,7 +28,11 @@ import { EditarProductosComponent } from './pages/productos/editar-productos/edi
     CrearProductosComponent,
     NavbarComponent,
     VerProductoComponent,
-    EditarProductosComponent
+    EditarProductosComponent,
+    CrearReservasComponent,
+    EditarReservasComponent,
+    ListarReservasComponent,
+    VerReservasComponent
   ],
   imports: [
     BrowserModule,
