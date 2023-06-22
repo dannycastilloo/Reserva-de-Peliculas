@@ -17,6 +17,10 @@ import { CrearReservasComponent } from './pages/reservas/crear-reservas/crear-re
 import { EditarReservasComponent } from './pages/reservas/editar-reservas/editar-reservas.component';
 import { ListarReservasComponent } from './pages/reservas/listar-reservas/listar-reservas.component';
 import { VerReservasComponent } from './pages/reservas/ver-reservas/ver-reservas.component';
+import { CrearPeliculasComponent } from './pages/peliculas/crear-peliculas/crear-peliculas.component';
+import { EditarPeliculasComponent } from './pages/peliculas/editar-peliculas/editar-peliculas.component';
+import { ListarPeliculasComponent } from './pages/peliculas/listar-peliculas/listar-peliculas.component';
+import { VerPeliculasComponent } from './pages/peliculas/ver-peliculas/ver-peliculas.component';
 
 
 @NgModule({
@@ -32,7 +36,11 @@ import { VerReservasComponent } from './pages/reservas/ver-reservas/ver-reservas
     CrearReservasComponent,
     EditarReservasComponent,
     ListarReservasComponent,
-    VerReservasComponent
+    VerReservasComponent,
+    CrearPeliculasComponent,
+    EditarPeliculasComponent,
+    ListarPeliculasComponent,
+    VerPeliculasComponent
   ],
   imports: [
     BrowserModule,
