@@ -1,29 +1,33 @@
 const jwt = require('jsonwebtoken');
 
-const User = require("../models/User");
+const User = require("../models/Socio");
 const config = require('../config/global');
 
-exports.crearUsuario = async (req, res) => {
+exports.crearSocio = async (req, res) => {
     //const { username, email, password } = req.body;
     //console.log(username, email, password)
     //console.log(user)
 
     try {
         
-        const { username, email, password } = req.body;
+        const { codigo,nombre, username, email, password,direccion, telefono } = req.body;
         const user = new User(
             {
-               username,
-               email,
-               password
+                codigo:Number,
+                nombre: String,
+                email: String,
+                password: String,
+                direccion: String,
+                telefono: Number
+                
             } 
          );
 
         
-        user.password = await user.encryptPassword(user.password)
-        await user.save();
+        socio.password = await socio.encryptPassword(socio.password)
+        await socio.save();
 
-        const token = jwt.sign({id: user._id}, config.secret, {
+        const token = jwt.sign({id: socio._id}, config.secret, {
             expiresIn: 60 * 60 * 24
         })
         //res.json({message: 'Received'})
@@ -35,7 +39,7 @@ exports.crearUsuario = async (req, res) => {
     }
 }
 
-exports.obtenerUsuario = async (req, res) => {
+exports.obtenerSocio = async (req, res) => {
 
     const { email, password } = req.body;
     console.log(email, password)

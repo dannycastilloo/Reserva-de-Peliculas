@@ -1,21 +1,21 @@
 const mongoose = require('mongoose');
 
-const ProductoSchema = mongoose.Schema({
+const peliculasSchema = mongoose.Schema({
     
-    producto: {
+    titulo: {
         type: String,
         require: true
     },
-    categoria: {
+    genero: {
         type: String,
         require: true
     },
-    ubicacion: {
+    director: {
         type: String,
         require: true
     },
-    precio: {
-        type: Number,
+    actores: {
+        type: String,
         require: true
     },
     fechaCreacion: {
@@ -24,4 +24,4 @@ const ProductoSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Producto', ProductoSchema)
+module.exports = mongoose.model('Peliculas', peliculasSchema)

@@ -12,9 +12,11 @@ app.use(cors())
 
 app.use(express.json());
 
-app.use('/api/productos', require('./routes/producto'));
-app.use('/api/login', require('./routes/usuario'));
-app.use('/api/create-user', require('./routes/usuario'));
+
+app.use('/api/peliculas', require('./routes/peliculas'));
+app.use('/api/listarespera', require('./routes/listarespera'));
+app.use('/api/login', require('./routes/socio'));
+app.use('/api/create-user', require('./routes/socio'));
 
 
 
