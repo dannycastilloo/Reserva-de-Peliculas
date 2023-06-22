@@ -1,1 +1,82 @@
-<p>crear-reservas works!</p>
+<app-navbar></app-navbar>
+<section class="content">
+    <div class="container-fluid">
+      <div class="row m-t-sm">
+        <div class="col-md-15">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="col-md-12 col-sm-12" id="form" style="display:block;">
+                        <div class="panel panel-filled">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-sm-12"><h5 class="m-t-xs">Ingreso de Reserva</h5></div>
+                                </div>
+                                <form [formGroup]="reservaForm" (ngSubmit)="agregarReserva()">
+                                    <div class="form-group">
+                                        <label>Titulo</label>
+                                        <input type="text" formControlName="Titulo"
+                                            class="form-control" placeholder="Ingresar nombre del Titulo">
+                                        <div class="text-danger"
+                                            *ngIf="reservaForm.get('Titulo')?.hasError('required') &&
+                                                    reservaForm.get('Titulo')?.touched">
+                                            <span>El Titulo <strong>es obligatorio</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Género</label>
+                                        <input type="text" formControlName="Genero"
+                                            class="form-control" placeholder="Ingresar el nombre del Genero">
+                                        <div class="text-danger"
+                                            *ngIf="reservaForm.get('Género')?.hasError('required') &&
+                                                    reservaForm.get('Género')?.touched">
+                                            <span>El Género <strong>es obligatorio</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Director</label>
+                                        <input type="text" formControlName="Director"
+                                            class="form-control" placeholder="Ingresar el nombre del director">
+                                        <div class="text-danger"
+                                            *ngIf="reservaForm.get('Director')?.hasError('required') &&
+                                                    reservaForm.get('Director')?.touched">
+                                            <span>El Nombre del Director <strong>es obligatorio</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Actor</label>
+                                        <input type="number" formControlName="Actor"
+                                            class="form-control" placeholder="Ingresar el nombre del Actor">
+                                        <div class="text-danger"
+                                            *ngIf="reservaForm.get('Actor')?.hasError('required') &&
+                                                    reservaForm.get('Actor')?.touched">
+                                            <span>El Nombre del Actor <strong>es obligatorio</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Fecha de creación</label>
+                                        <input type="text" formControlName="Fecha de creación"
+                                            class="form-control" placeholder="Ingresar la fecha de creación">
+                                        <div class="text-danger"
+                                            *ngIf="reservaForm.get('Fecha de creación')?.hasError('required') &&
+                                                    reservaForm.get('Fecha de creación')?.touched">
+                                            <span>La fecha  <strong>es obligatoria</strong></span>
+                                        </div>
+                                    </div>
+                                    <div  class="col-sm-12 text-right">
+                                        <div class="panel-body buttons-margin">
+                                           <button type="submit" [disabled]="reservaForm.invalid"  class="btn btn-w-md btn-success">Guardar</button>&nbsp;&nbsp;
+                                           <button class="btn btn-w-md btn-warning" routerLink="/listar-reservas">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+      </div>
+    </div>
+  </section>
+
+
