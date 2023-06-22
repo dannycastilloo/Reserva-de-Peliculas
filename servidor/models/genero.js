@@ -1,20 +1,16 @@
 const mongoose = require('mongoose');
 
-const peliculasSchema = mongoose.Schema({
+const GeneroSchema = mongoose.Schema({
     
-    titulo: {
+    terror: {
         type: String,
         require: true
     },
-    genero: {
+    accion: {
         type: String,
         require: true
     },
-    director: {
-        type: String,
-        require: true
-    },
-    actores: {
+    comedia: {
         type: String,
         require: true
     },
@@ -24,4 +20,4 @@ const peliculasSchema = mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Peliculas', peliculasSchema)
+module.exports = mongoose.model('Genero', GeneroSchema)
